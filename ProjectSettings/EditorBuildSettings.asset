@@ -8,8 +8,15 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/SampleScene.unity
     guid: 99c9720ab356a0642a771bea13969a05
+  - enabled: 1
+    path: Assets/Scenes/Hololens2Hand.unity
+    guid: bf2b2e39384655c4abfac54f17ce1b6b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 6ee5984783e8b474783277f7571e7f62,
+      type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 2a142d591e457b84687549f0694ab438,
+      type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 8346bf09908c1f44eafac2c6b7f94dcd,
       type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: ed51f03cebbe8a84aa9a17cec5f3b533,
       type: 2}
