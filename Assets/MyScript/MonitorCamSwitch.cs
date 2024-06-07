@@ -24,7 +24,7 @@ public class MonitorCamSwitch : MonoBehaviour
         DynamicCamera = GameObject.Find("DynamicCamera");
         PlayerFollowCameraTPS = GameObject.Find("PlayerFollowCameraTPS");
         PlayerFollowCameraFPS = GameObject.Find("PlayerFollowCameraFPS");
-        CameraStateCallback(2); // Initial state
+        CameraStateCallback(0); // Initial state
     }
 
     void Update()
