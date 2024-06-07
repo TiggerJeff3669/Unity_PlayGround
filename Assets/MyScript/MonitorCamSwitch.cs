@@ -1,30 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
 using StarterAssets;
+using Unity.XR.CoreUtils;
 using UnityEngine;
 using UnityEngine.InputSystem;
+using static UnityEngine.Rendering.DebugUI;
 
 public class MonitorCamSwitch : MonoBehaviour
 {
-    GameObject MonitorCam;
-    GameObject PlayerArmature;
-    GameObject PlayerCapsule;
-    GameObject PlayerCam;
-    GameObject PlayerFollowCameraFPS;
+    public GameObject PlayerArmature;
+    // GameObject PlayerCapsule;
+    public GameObject PlayerCam, DynamicCamera;
 
-    GameObject PlayerFollowCameraTPS;
+    public GameObject PlayerFollowCameraTPS, PlayerFollowCameraFPS;
 
-    private int cameraState = 0;
+    public int cameraState = 0;
 
     void Start()
     {
-        MonitorCam = GameObject.Find("MonitorCam"); // FreeFlyCam Reference
         PlayerArmature = GameObject.Find("PlayerArmature"); // WhiteMan Reference
-        PlayerCapsule = GameObject.Find("PlayerCapsule"); // FreeFly Reference 
+        // PlayerCapsule = GameObject.Find("PlayerCapsule"); // FreeFly Reference 
         PlayerCam = GameObject.Find("PlayerCam"); // Common Camera Reference
-        PlayerFollowCameraFPS = GameObject.Find("PlayerFollowCameraFPS");
+        DynamicCamera = GameObject.Find("DynamicCamera");
         PlayerFollowCameraTPS = GameObject.Find("PlayerFollowCameraTPS");
-        CameraStateCallback(0); // Initial state
+        PlayerFollowCameraFPS = GameObject.Find("PlayerFollowCameraFPS");
+        CameraStateCallback(2); // Initial state
     }
 
     void Update()
@@ -41,43 +41,52 @@ public class MonitorCamSwitch : MonoBehaviour
         switch (state)
         {
             case 0:
-                // 状态 0：启用监视器镜头，停用其他对象
-                MonitorCam.SetActive(true);
+                // 狀態 0：啟用監視器鏡頭，停用其他對象
                 PlayerArmature.GetComponent<PlayerInput>().enabled = false;
-                PlayerCapsule.GetComponent<PlayerInput>().enabled = false;
+                // PlayerCapsule.GetComponent<PlayerInput>().enabled = false;
                 PlayerCam.SetActive(false);
-                PlayerFollowCameraFPS.SetActive(false);
                 PlayerFollowCameraTPS.SetActive(false);
+                PlayerFollowCameraFPS.SetActive(false);
+                DynamicCamera.SetActive(true);
                 break;
             case 1:
-                // 状态 1：启用 PlayerCapsule 和 PlayerCam，停用其他对象
-                MonitorCam.SetActive(false);
-                PlayerArmature.GetComponent<PlayerInput>().enabled = false;
-                PlayerCapsule.GetComponent<PlayerInput>().enabled = true;
-                PlayerCam.SetActive(true);
-                PlayerFollowCameraFPS.SetActive(true);
-                PlayerFollowCameraTPS.SetActive(false);
+                StartCoroutine(SwitchToState1());
                 break;
             case 2:
-                // 状态 2：启用 PlayerArmature 和 PlayerCam，停用其他对象
+                // 狀態 2：啟用 PlayerArmature 和 PlayerCam，停用其他對象
                 StartCoroutine(SwitchToState2());
                 break;
         }
     }
-
-    IEnumerator SwitchToState2()
+    IEnumerator SwitchToState1()
     {
-        // 先停用状态1的组件
-        MonitorCam.SetActive(false);
+        // 先停用狀態1的組件
         // PlayerArmature.GetComponent<ThirdPersonController>().enabled = false;
         // PlayerCapsule.GetComponent<FirstPersonController>().enabled = false;
         PlayerArmature.GetComponent<PlayerInput>().enabled = false;
-        PlayerCapsule.GetComponent<PlayerInput>().enabled = false;
+        DynamicCamera.SetActive(false);
+        PlayerFollowCameraTPS.SetActive(false);
+        // PlayerCapsule.GetComponent<PlayerInput>().enabled = false;
         PlayerCam.SetActive(true);
-        PlayerFollowCameraFPS.SetActive(false);
+        PlayerFollowCameraFPS.SetActive(true);
+        yield return new WaitForSeconds(0.05f);
+        // 啟用狀態2的組件
+        PlayerArmature.GetComponent<PlayerInput>().enabled = true;
+
+    }
+    IEnumerator SwitchToState2()
+    {
+        // 先停用狀態1的組件
+        // PlayerArmature.GetComponent<ThirdPersonController>().enabled = false;
+        // PlayerCapsule.GetComponent<FirstPersonController>().enabled = false;
+        PlayerArmature.GetComponent<PlayerInput>().enabled = false;
+        DynamicCamera.SetActive(false);
+        PlayerFollowCameraFPS.SetActive(!true);
+        // PlayerCapsule.GetComponent<PlayerInput>().enabled = false;
+        PlayerCam.SetActive(true);
         PlayerFollowCameraTPS.SetActive(true);
         yield return new WaitForSeconds(0.05f);
-        // 启用状态2的组件
+        // 啟用狀態2的組件
         PlayerArmature.GetComponent<PlayerInput>().enabled = true;
 
     }

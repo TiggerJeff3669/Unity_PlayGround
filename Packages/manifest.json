@@ -1,5 +1,23 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Cesium",
+      "url": "https://unity.pkg.cesium.com",
+      "scopes": [
+        "com.cesium.unity"
+      ]
+    },
+    {
+      "name": "Maps SDK for Unity",
+      "url": "https://unity.virtualearth.net/npm/registry/",
+      "scopes": [
+        "com.microsoft.maps"
+      ]
+    }
+  ],
   "dependencies": {
+    "com.cesium.unity": "1.10.1",
+    "com.microsoft.maps.unity": "0.11.2",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.10.1.tgz",
     "com.microsoft.mixedreality.toolkit.examples": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz",
     "com.microsoft.mixedreality.toolkit.extensions": "file:MixedReality/com.microsoft.mixedreality.toolkit.extensions-2.8.3.tgz",
