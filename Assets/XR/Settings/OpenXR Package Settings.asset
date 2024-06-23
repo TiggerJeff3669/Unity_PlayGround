@@ -380,10 +380,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   features:
   - {fileID: 2921583750127354764}
-  - {fileID: 6255356434152221068}
   - {fileID: 8447608229908489640}
-  - {fileID: 1101243487980517990}
-  - {fileID: -7129640679758847509}
   - {fileID: -3709185245213928433}
   - {fileID: 3472383896064000598}
   - {fileID: 3001172999905372086}
@@ -393,13 +390,9 @@ MonoBehaviour:
   - {fileID: -9151213325015360273}
   - {fileID: -4930593440781102690}
   - {fileID: -2156155225664562501}
-  - {fileID: 672012709814000412}
   - {fileID: -1603504405860091413}
-  - {fileID: -8410421006771632719}
   m_renderMode: 1
   m_depthSubmissionMode: 0
-  m_optimizeBufferDiscards: 0
-  m_symmetricProjection: 0
 --- !u!114 &-4504668938017602240
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -602,13 +595,9 @@ MonoBehaviour:
   features:
   - {fileID: 6830612462031130914}
   - {fileID: -4988752904768590313}
-  - {fileID: -7673501158349845794}
   - {fileID: -4504668938017602240}
-  - {fileID: -6230548335604215625}
-  - {fileID: 2414239840278711151}
   - {fileID: 2820931462710900355}
   - {fileID: 8444342143946277673}
-  - {fileID: -7708697632857197131}
   - {fileID: 1347809307829129821}
   - {fileID: 915166935258076134}
   - {fileID: -2904425418501042882}
@@ -617,14 +606,10 @@ MonoBehaviour:
   - {fileID: -4922282977862439720}
   - {fileID: 2208606989344984414}
   - {fileID: -5507875149509013513}
-  - {fileID: -3613117193611388051}
   - {fileID: -7558570973945712570}
   - {fileID: 7261076253330555307}
-  - {fileID: 8398261430024276267}
   m_renderMode: 1
   m_depthSubmissionMode: 1
-  m_optimizeBufferDiscards: 0
-  m_symmetricProjection: 0
 --- !u!114 &-1603504405860091413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1093,13 +1078,6 @@ MonoBehaviour:
   - visibleName: Quest 3
     manifestName: eureka
     enabled: 1
-  forceRemoveInternetPermission: 0
-  symmetricProjection: 0
-  foveatedRenderingApi: 0
-  systemSplashScreen: {fileID: 0}
-  optimizeBufferDiscards: 1
-  lateLatchingMode: 0
-  lateLatchingDebug: 0
 --- !u!114 &3472383896064000598
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1424,13 +1402,9 @@ MonoBehaviour:
   features:
   - {fileID: 7843118540433126862}
   - {fileID: 852336998390086335}
-  - {fileID: 946326016414024901}
   - {fileID: 5841103302058589449}
-  - {fileID: 1033847251710244669}
-  - {fileID: 6681247653400443833}
   - {fileID: 6608460434294252642}
   - {fileID: 343373645785194002}
-  - {fileID: 4667212400367052110}
   - {fileID: -4950734542143326375}
   - {fileID: 5957214721102277029}
   - {fileID: 8009923168988824238}
@@ -1440,15 +1414,11 @@ MonoBehaviour:
   - {fileID: -6285104301099117405}
   - {fileID: -7219328913385879866}
   - {fileID: -4326875544675811101}
-  - {fileID: -340145199259872159}
   - {fileID: 4210284150415824895}
   - {fileID: 4036451610337128358}
   - {fileID: 472644045594021373}
-  - {fileID: 3931448747722632964}
   m_renderMode: 1
   m_depthSubmissionMode: 1
-  m_optimizeBufferDiscards: 0
-  m_symmetricProjection: 0
 --- !u!114 &6681247653400443833
 MonoBehaviour:
   m_ObjectHideFlags: 0
