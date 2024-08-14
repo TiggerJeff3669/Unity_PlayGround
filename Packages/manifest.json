@@ -16,7 +16,7 @@
     }
   ],
   "dependencies": {
-    "com.cesium.unity": "1.10.1",
+    "com.cesium.unity": "1.8.0",
     "com.microsoft.maps.unity": "0.11.2",
     "com.microsoft.mixedreality.openxr": "file:MixedReality/com.microsoft.mixedreality.openxr-1.10.1.tgz",
     "com.microsoft.mixedreality.toolkit.examples": "file:MixedReality/com.microsoft.mixedreality.toolkit.examples-2.8.3.tgz",
