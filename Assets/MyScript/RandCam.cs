@@ -7,7 +7,7 @@ public class RandCam : MonoBehaviour
     public float switchIntervalMax = 5f;  // 切換鏡頭的最大間隔
     
     public float maxOffsetDistance = 5f;  // 鏡頭最大偏移距離
-    public float yp=20,yn=5;
+    public float ypos=20,yneg=5;
     public Camera mainCamera;
     private float switchTimer;
 
@@ -32,7 +32,7 @@ public class RandCam : MonoBehaviour
     {
         // 以目標物體為基準，生成隨機偏移
         Vector3 randomOffset = new Vector3(Random.Range(-maxOffsetDistance, maxOffsetDistance),
-                                           Random.Range(yn, yp),
+                                           Random.Range(yneg, ypos),
                                            Random.Range(-maxOffsetDistance, maxOffsetDistance));
 
         // 設定攝影機位置，參考目標物體位置加上隨機偏移
