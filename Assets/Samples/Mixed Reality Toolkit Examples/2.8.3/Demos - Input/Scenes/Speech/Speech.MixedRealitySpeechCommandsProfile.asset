@@ -58,3 +58,10 @@ MonoBehaviour:
       id: 0
       description: Toggle Diagnostics
       axisConstraint: 0
+  - localizationKey: 
+    keyword: "\u53F0\u5317\u5730\u6A19"
+    keyCode: 284
+    action:
+      id: 0
+      description: Toggle Diagnostics
+      axisConstraint: 0
